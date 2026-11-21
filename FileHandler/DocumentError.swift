@@ -47,8 +47,13 @@ enum DocumentError : Error , LocalizedError {
     
     case metaDataExtractionFailed
     
-    // Unknown
+    // Upload Error
     
+    case uploadFailed
+    case invalidServerResponse
+    
+    // Unknown
+
     case unknownError
      
 }

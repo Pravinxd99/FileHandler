@@ -8,7 +8,7 @@
 import Foundation
 import UniformTypeIdentifiers
 
-struct DocumentValidator : Sendable {
+struct DocumentValidator  {
     
    
     
@@ -31,7 +31,7 @@ struct DocumentValidator : Sendable {
     
     func readFileSize (from url : URL) throws -> Int64 {
         do {
-            let attributes = try FileManager.default.attributesOfItem(atPath: url.path())
+            let attributes = try FileManager.default.attributesOfItem(atPath: url.path)
             
             guard let size = attributes[.size] as? Int64 else {
                 throw DocumentError.fileSizeUnreadable

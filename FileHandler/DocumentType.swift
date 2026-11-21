@@ -7,7 +7,7 @@
 
 import Foundation
 import UniformTypeIdentifiers
-enum DocumentType : CaseIterable {
+enum DocumentType : String , Codable , CaseIterable {
     
     case image
     case video
@@ -19,15 +19,15 @@ enum DocumentType : CaseIterable {
     var documentUTType : [UTType] {
         switch self {
         case .image:
-            [.image , .jpeg , .png , .gif,.tiff,.bmp , .heic]
+            [.image , .jpeg , .png , .gif,.tiff,.bmp , .heic ]
         case .video:
             [.video , .movie , .mpeg4Movie , .avi , .quickTimeMovie]
         case .pdf:
-            [.pdf]
+            [.pdf ]
         case .audio:
             [.audio , .mp3 ,.mpeg4Audio, .aiff, .wav]
         case .plainText:
-            [.text , .plainText , .json , .xml , .html]
+            [.text , .plainText , .json , .xml , .html  ]
         }
     }
     
